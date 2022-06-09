@@ -7,7 +7,7 @@ int main (int argc, char* argv[])
 {
 	amrex::Initialize(argc,argv);
 	{
-        ParmParse pp;
+		ParmParse pp;
 		
 		std::cout << "\n";
 		std::cout << "Reading input file " << argv[1] << "\n";
@@ -45,12 +45,12 @@ int main (int argc, char* argv[])
 
 		if (pp.contains("Nlevel")){
 			int nlevel;
-        	pp.query("Nlevel",nlevel);
+			pp.query("Nlevel",nlevel);
 			std::cout << "Nlevel: " << nlevel << "\n";
 		}
 
 		if(pp.contains("Ngrid")){
-            std::vector<double> ngrid;
+			std::vector<double> ngrid;
 			pp.getarr("Ngrid", ngrid);
 			int count= pp.countval("Ngrid");
 			std::cout << "Ngrid: ";
@@ -62,18 +62,18 @@ int main (int argc, char* argv[])
 
 		if (pp.contains("MAX_ND")){
 			int max_nd;
-        	pp.query("MAX_ND",max_nd);
+			pp.query("MAX_ND",max_nd);
 			std::cout << "MAX_ND: " << max_nd << "\n";
 		}
 
 		if (pp.contains("Ndim")){
 			int ndim;
-        	pp.query("Ndim",ndim);
+			pp.query("Ndim",ndim);
 			std::cout << "Ndim: " << ndim<< "\n";
 		}
 
 		if(pp.contains("decomp")){
-            std::vector<double> decomp;
+			std::vector<double> decomp;
 			pp.getarr("decomp", decomp);
 			int count= pp.countval("decomp");
 			std::cout << "decomp: ";
@@ -90,7 +90,7 @@ int main (int argc, char* argv[])
 			std::string nm;
 			std::cout << "Grid periodicity: " ;
 			for (int i = 0; i < nperiodicity ; i++){
-            	pp.get("GRID_PERIODICITY", nm, i);
+				pp.get("GRID_PERIODICITY", nm, i);
 				std::cout << nm << " " ;
 			}
 			std::cout << "\n";
@@ -101,7 +101,7 @@ int main (int argc, char* argv[])
 			std::string nm;
 			std::cout << "Overlap periodic: " ;
 			for (int i = 0; i < count; i++){
-            	pp.get("OVERLAP_PERIODIC", nm, i);
+				pp.get("OVERLAP_PERIODIC", nm, i);
 				std::cout << nm << " " ;
 			}
 			std::cout << "\n";
@@ -110,7 +110,7 @@ int main (int argc, char* argv[])
 		if(pp.contains("PERIODIC_LENGTH")){
 			std::vector<double>periodic_length;
 			std::cout << "PERIODIC_LENGTH: " ;
-        	pp.getarr("PERIODIC_LENGTH", periodic_length);
+			pp.getarr("PERIODIC_LENGTH", periodic_length);
 			std::cout << periodic_length[0] << " " << periodic_length[1] << " " << periodic_length[2] << " " << periodic_length[3] << "\n";
 		}
 
