@@ -50,7 +50,7 @@ int main (int argc, char* argv[])
 		}
 
 		if(pp.contains("Ngrid")){
-			std::vector<double> ngrid;
+			std::vector<int> ngrid;
 			pp.getarr("Ngrid", ngrid);
 			int count= pp.countval("Ngrid");
 			std::cout << "Ngrid: ";
@@ -73,7 +73,7 @@ int main (int argc, char* argv[])
 		}
 
 		if(pp.contains("decomp")){
-			std::vector<double> decomp;
+			std::vector<int> decomp;
 			pp.getarr("decomp", decomp);
 			int count= pp.countval("decomp");
 			std::cout << "decomp: ";
