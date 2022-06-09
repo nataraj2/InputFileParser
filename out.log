@@ -1,0 +1,33 @@
+MPI initialized with 1 MPI processes
+MPI initialized with thread support level 0
+AMReX (22.06-12-gc8f33c76fb8a) initialized
+
+Reading input file solver.inp
+Flow case: CYL_FLOW
+Restart: YES
+file_count: 5
+t_end: 0.09
+space_order: 3
+Nlevel: 2
+Ngrid: 1 1 
+MAX_ND: 3
+decomp: 2 2 2 2 
+Grid periodicity: false true false false 
+Overlap periodic: false true false false 
+PERIODIC_LENGTH: 0 -1 0 0
+Overset grids: true
+INTERP_INTERFACE_TREATMENT: SAT_OVERSET
+METRIC_IDENTITY_TERMS: false
+FIXED_TIMESTEP: false
+DT: 0.008
+Re: 400
+Pr: 0.72
+x_0: 0
+y_0: 0
+epsilon: 2
+gamma_c: 1.4
+scale_f: 1
+u_vel: 2
+Twall: 2.5
+u_inf: 0.3
+scale_y: 1

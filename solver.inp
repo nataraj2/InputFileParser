@@ -1,0 +1,44 @@
+FLOW_CASE = CYL_FLOW		# OSC_CYL or T_PERIODIC_CYL_PULSE
+
+RESTART = YES		
+file_count = 5
+t_end = 0.09
+
+space_order = 3
+
+Nlevel = 2
+Ngrid =  1  1
+
+MAX_ND = 3
+NDim = 2
+
+decomp = 2 2  2 2 # Parallel Decomposition for each grid
+
+# Set Periodicity for each grid #
+GRID_PERIODICITY =  false  true  false  false 
+OVERLAP_PERIODIC =  false  true  false  false 
+PERIODIC_LENGTH =  0  -1.0  0.0  0.0 		# negative for O-periodicity
+
+OVERSET_GRIDS = true
+INTERP_INTERFACE_TREATMENT = SAT_OVERSET	# INJECTION_OVERSET or SAT_OVERSET 
+
+METRIC_IDENTITY_TERMS = false
+
+FIXED_TIMESTEP = false
+DT = 0.008
+
+Re = 400
+Pr = 0.72
+
+# COMPRESSIBLE VORTEX FLOW IC
+x_0 = 0.0
+y_0 = 0.0
+epsilon = 2.0
+gamma_c = 1.4 #1.401513467320151
+scale_f = 1.0
+u_vel = 2.0 #0.5/sqrt(2)
+
+# BOUNDARY LAYER IC
+Twall = 2.5	# Isothermal wall temperature
+u_inf = 0.3
+scale_y = 1.0
